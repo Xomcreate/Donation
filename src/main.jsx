@@ -13,7 +13,7 @@ import Login from './DonationComponent/Login';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
    <BrowserRouter>
-      <Header />
+      <Header/>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/About' element={<About />} />
