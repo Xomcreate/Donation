@@ -11,7 +11,7 @@ function Header() {
         {/* Left section */}
         <div className="col-span-2 flex items-center justify-center">
           <div className="flex items-center">
-            <BiDonateHeart className=" text-[40px] font-bold mr-2 text-[orangered]" />
+            <BiDonateHeart className="text-[40px] font-bold mr-1 text-[orangered]" />
             <p className="font-bold font-serif text-[25px]">SupportNet</p>
           </div>
         </div>
