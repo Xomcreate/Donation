@@ -1,15 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { BiDonateHeart } from "react-icons/bi";
 import { FiMenu, FiX } from "react-icons/fi";
 import { FaRegHeart } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
+import SignIn from "./Signin"; // Import the SignIn component
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSignInOpen, setIsSignInOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const toggleSignIn = () => {
+    setIsSignInOpen(!isSignInOpen);
   };
 
   // Close the menu if the screen is resized to a large screen
@@ -20,9 +26,9 @@ function Header() {
       }
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -33,12 +39,12 @@ function Header() {
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="h-[10vh] w-full bg-gradient-to-r from-gray-200 to-white text-white flex items-center justify-between px-4 shadow-md"
+        className="h-[10vh] w-full bg-white text-white flex items-center justify-between px-4 shadow-md"
       >
         {/* Logo Section */}
-        <div className="flex items-center  pl-[30px]">
+        <div className="flex items-center pl-[30px]">
           <BiDonateHeart className="text-[30px] md:text-[30px] font-bold mr-2 text-[red]" />
-          <p className="font-bold text-black flex font-serif text-[20px]  md:text-[20px]">
+          <p className="font-bold text-black flex font-serif text-[20px] md:text-[20px]">
             SupportNet
           </p>
         </div>
@@ -66,13 +72,20 @@ function Header() {
 
         {/* Desktop User Actions */}
         <div className="hidden md:flex items-center pr-[30px] gap-4">
-          <button className="bg-gradient-to-r from-green-400 to-green-600 h-[40px] px-6 py-2 rounded-full text-white font-semibold shadow-md hover:from-green-500 hover:to-green-700 hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out">
+          <Link
+            to="/signup"
+            className="bg-gradient-to-r from-green-400 to-green-600 h-[40px] px-6 py-2 rounded-full text-white font-semibold shadow-md hover:from-green-500 hover:to-green-700 hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out"
+          >
             Sign Up
-          </button>
-          <button className="bg-gradient-to-r from-blue-400 to-blue-600 h-[40px] px-6 py-2 rounded-full text-white font-semibold shadow-md hover:from-blue-500 hover:to-blue-700 hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out">
+          </Link>
+          <button
+            onClick={toggleSignIn}
+            className="bg-gradient-to-r from-blue-400 to-blue-600 h-[40px] px-6 py-2 rounded-full text-white font-semibold shadow-md hover:from-blue-500 hover:to-blue-700 hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out"
+          >
             Sign In
           </button>
         </div>
+
         {/* Hamburger Menu Button */}
         <button
           onClick={toggleMenu}
@@ -90,13 +103,13 @@ function Header() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ duration: 0.5 }}
-            className="fixed top-0 right-0 w-[70vw] h-full bg-gradient-to-b from-gray-300 to-gray-200 text-black flex flex-col shadow-lg"
+            className="fixed top-0 right-0 w-[70vw] h-full bg-white text-black flex flex-col shadow-lg"
           >
             <div className="flex items-center justify-between px-4 py-4 border-b border-gray-800">
               <p className="font-bold font-serif text-[20px]">Menu</p>
               <button
                 onClick={toggleMenu}
-                className="text-white text-2xl focus:outline-none"
+                className="text-black text-2xl focus:outline-none"
               >
                 <FiX />
               </button>
@@ -137,21 +150,41 @@ function Header() {
               <Link
                 to="/donate"
                 onClick={toggleMenu}
-                className="w-full py-2 flex items-center gap-2  font-semibold bg-[orangered] justify-center rounded-2xl h-[5vh] hover:bg-[orangered]/90 transition-transform duration-300 hover:scale-105"
+                className="w-full py-2 flex items-center gap-2 font-semibold bg-[orangered] justify-center rounded-2xl h-[5vh] hover:bg-[orangered]/90 transition-transform duration-300 hover:scale-105"
               >
                 <FaRegHeart className="animate-pulse" />
                 Donate
               </Link>
             </nav>
             <div className="mt-4 flex flex-col gap-4 px-6">
-              <button className="bg-gradient-to-r from-green-400 to-green-600 px-6 py-2 rounded-full text-white font-semibold shadow-md hover:from-green-500 hover:to-green-700 hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out">
+              <Link
+                to="/signup"
+                className="bg-gradient-to-r from-green-400 to-green-600 px-6 py-2 rounded-full text-white font-semibold shadow-md hover:from-green-500 hover:to-green-700 hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out"
+              >
                 Sign Up
-              </button>
-              <button className="bg-gradient-to-r from-blue-400 to-blue-600 px-6 py-2 rounded-full text-white font-semibold shadow-md hover:from-blue-500 hover:to-blue-700 hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out">
+              </Link>
+              <button
+                onClick={toggleSignIn}
+                className="bg-gradient-to-r from-blue-400 to-blue-600 px-6 py-2 rounded-full text-white font-semibold shadow-md hover:from-blue-500 hover:to-blue-700 hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out"
+              >
                 Sign In
               </button>
             </div>
           </motion.aside>
+        )}
+      </AnimatePresence>
+
+      {/* Sign In Modal */}
+      <AnimatePresence>
+        {isSignInOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
+          >
+            <SignIn onClose={toggleSignIn} />
+          </motion.div>
         )}
       </AnimatePresence>
     </>
