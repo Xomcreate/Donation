@@ -8,7 +8,7 @@ import About from './DonationComponent/About'
 import Footer from './DonationComponent/Footer';
 import Register from './DonationComponent/Register';
 import Contact from './DonationComponent/Contact';
-import Login from './DonationComponent/Login';
+import SignUp from './DonationComponent/Signup';
 import Donate from './DonationComponent/Donate';
 import Blog from './DonationComponent/Blog';
 
@@ -18,10 +18,10 @@ createRoot(document.getElementById('root')).render(
       <Header/>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/About' element={<About />} />
+        <Route path='/Aboutus' element={<About />} />
         <Route path='/Contact' element={<Contact />} />
         <Route path='/Register' element={<Register />} />
-        <Route path='/Login' element={<Login/>} />
+        <Route path='/Signup' element={<SignUp/>} />
         <Route path='/Donate' element={<Donate/>} />
         <Route path='/Blog' element={<Blog/>} />
 
@@ -30,7 +30,3 @@ createRoot(document.getElementById('root')).render(
     </BrowserRouter>
   </StrictMode>,
 )
-
-
-
-
