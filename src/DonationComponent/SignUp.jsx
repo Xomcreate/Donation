@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import SignIn from "./Signin";
+import SignIn from "./SignIn";
 
 function SignUp() {
   const [showSignIn, setShowSignIn] = useState(false);
