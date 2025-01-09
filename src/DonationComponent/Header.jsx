@@ -63,15 +63,9 @@ function Header() {
           ))}
           <Link
             to="/donate"
-<<<<<<< HEAD
-            className="flex items-center gap-2 bg-[orangered] text-white px-4 py-2 rounded-3xl font-semibold hover:bg-[orangered]/90 hover:scale-105 transition-transform duration-300"
-          >
-            <FaRegHeart className=" text-white" />
-=======
             className="flex items-center gap-2 bg-[orangered] text-black px-4 py-2 rounded-3xl font-semibold hover:bg-[orangered]/90 hover:scale-105 transition-transform duration-300"
           >
             <FaRegHeart className="animate-pulse text-black" />
->>>>>>> b3a4a665d83f9217b477d3a884119689168a7d1e
             Donate
           </Link>
         </nav>
@@ -80,21 +74,13 @@ function Header() {
         <div className="hidden md:flex items-center pr-[30px] gap-4">
           <Link
             to="/signup"
-<<<<<<< HEAD
             className=" bg-[blue] h-[40px] px-6 py-2 rounded-full text-white font-semibold shadow-md hover:from-green-500 hover:to-green-700 hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out"
-=======
-            className="bg-gradient-to-r from-green-400 to-green-600 h-[40px] px-6 py-2 rounded-full text-white font-semibold shadow-md hover:from-green-500 hover:to-green-700 hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out"
->>>>>>> b3a4a665d83f9217b477d3a884119689168a7d1e
           >
             Sign Up
           </Link>
           <button
             onClick={toggleSignIn}
-<<<<<<< HEAD
             className=" bg-[orangered] h-[40px] px-6 py-2 rounded-full text-white font-semibold shadow-md hover:from-blue-500 hover:to-blue-700 hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out"
-=======
-            className="bg-gradient-to-r from-blue-400 to-blue-600 h-[40px] px-6 py-2 rounded-full text-white font-semibold shadow-md hover:from-blue-500 hover:to-blue-700 hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out"
->>>>>>> b3a4a665d83f9217b477d3a884119689168a7d1e
           >
             Sign In
           </button>
