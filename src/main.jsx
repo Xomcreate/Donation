@@ -6,9 +6,7 @@ import Header from './DonationComponent/Header'
 import Home from './DonationComponent/Home'
 import About from './DonationComponent/About'
 import Footer from './DonationComponent/Footer';
-import Register from './DonationComponent/Register';
 import Contact from './DonationComponent/Contact';
-import Login from './DonationComponent/Login';
 import Donate from './DonationComponent/Donate';
 import Blog from './DonationComponent/Blog';
 
@@ -30,7 +28,3 @@ createRoot(document.getElementById('root')).render(
     </BrowserRouter>
   </StrictMode>,
 )
-
-
-
-
