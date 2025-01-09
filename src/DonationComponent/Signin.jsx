@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
-function SignIn({ onClose }) {
+function Signin({ onClose }) {
   const navigate = useNavigate();
 
   const handleSwitchToSignUp = () => {
@@ -102,4 +102,4 @@ function SignIn({ onClose }) {
   );
 }
 
-export default SignIn;
+export default Signin;
