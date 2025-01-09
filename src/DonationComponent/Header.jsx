@@ -150,22 +150,22 @@ function Header() {
               <Link
                 to="/donate"
                 onClick={toggleMenu}
-                className="w-full py-2 flex items-center gap-2 font-semibold bg-[orangered] justify-center rounded-2xl h-[5vh] hover:bg-[orangered]/90 transition-transform duration-300 hover:scale-105"
+                className="w-full py-2 flex items-center text-white gap-2 font-semibold bg-[orangered] justify-center rounded-2xl h-[5vh] hover:bg-[orangered]/90 transition-transform duration-300 hover:scale-105"
               >
-                <FaRegHeart className="animate-pulse" />
+                <FaRegHeart  />
                 Donate
               </Link>
             </nav>
             <div className="mt-4 flex flex-col gap-4 px-6">
               <Link
                 to="/signup"
-                className="bg-gradient-to-r from-green-400 to-green-600 px-6 py-2 rounded-full text-white font-semibold shadow-md hover:from-green-500 hover:to-green-700 hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out"
+                className="bg-[blue] justify-center flex px-6 py-2 rounded-full text-white font-semibold shadow-md hover:from-green-500 hover:to-green-700 hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out"
               >
                 Sign Up
               </Link>
               <button
                 onClick={toggleSignIn}
-                className="bg-gradient-to-r from-blue-400 to-blue-600 px-6 py-2 rounded-full text-white font-semibold shadow-md hover:from-blue-500 hover:to-blue-700 hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out"
+                className="bg-[orangered] px-6 py-2 rounded-full text-white font-semibold shadow-md hover:from-blue-500 hover:to-blue-700 hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out"
               >
                 Sign In
               </button>
