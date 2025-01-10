@@ -18,7 +18,7 @@ function SignIn({ onClose }) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -50 }}
       className="bg-white w-full max-w-md mx-auto rounded-lg shadow-lg p-6 relative"
-    >a
+    >
       {/* Close Button */}
       <button
         onClick={onClose}
